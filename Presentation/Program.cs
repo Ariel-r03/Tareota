@@ -21,7 +21,7 @@ namespace Presentation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             IClientRepository clientRepository = new ClientRepository();
-            Application.Run(new Form1(clientRepository));
+            Application.Run(new Principal(clientRepository));
         }
 
         static IHostBuilder CreateHostBuilder(string[] args) =>

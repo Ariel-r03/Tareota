@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Gluon</name></assembly>
+<members>
+<member name="F:Gluon.RemoteAttribute.Verb@">
+<summary>
+ Preferred HTTP method or verb.
+</summary>
+</member>
+<member name="F:Gluon.RemoteAttribute.Path@">
+<summary>
+ Preferred path for the HTTP convention.
+ Example: &quot;/MyController/MyMethod&quot;.
+ If null, it is inferred from method and enclosing class name.
+</summary>
+</member>
+<member name="P:Gluon.RemoteAttribute.Verb(System.String)">
+<summary>
+ Preferred HTTP method or verb.
+</summary>
+</member>
+<member name="P:Gluon.RemoteAttribute.Path(System.String)">
+<summary>
+ Preferred path for the HTTP convention.
+ Example: &quot;/MyController/MyMethod&quot;.
+ If null, it is inferred from method and enclosing class name.
+</summary>
+</member>
+<member name="P:Gluon.RemoteAttribute.Verb">
+<summary>
+ Preferred HTTP method or verb.
+</summary>
+</member>
+<member name="P:Gluon.RemoteAttribute.Path">
+<summary>
+ Preferred path for the HTTP convention.
+ Example: &quot;/MyController/MyMethod&quot;.
+ If null, it is inferred from method and enclosing class name.
+</summary>
+</member>
+<member name="T:Gluon.RemoteAttribute">
+<summary>
+ Marks static methods that comprise an auto-detected Gluon service.
+</summary>
+</member>
+<member name="P:Gluon.Context.Environment">
+<summary>
+ The OWIN execution context.
+</summary>
+</member>
+<member name="T:Gluon.Context">
+<summary>
+ This gets passed into methods automatically.
+</summary>
+</member>
+<member name="T:Gluon.MidFunc">
+<summary>
+ Formalizes OWIN Middleware Function.
+</summary>
+</member>
+<member name="T:Gluon.AppFunc">
+<summary>
+ Formalizes OWIN Application Function.
+</summary>
+</member>
+<member name="P:Gluon.Json.JToken">
+<summary>
+ The JToken representation.
+</summary>
+</member>
+<member name="M:Gluon.Json.ToString">
+<summary>
+ Same as ToJsonString.
+</summary>
+</member>
+<member name="M:Gluon.Json.ToJsonString">
+<summary>
+ Converts to a raw JSON string.
+</summary>
+</member>
+<member name="M:Gluon.Json.FromJsonString(System.String)">
+<summary>
+ Lifts a raw Json string to Json.
+</summary>
+</member>
+<member name="T:Gluon.Json">
+<summary>
+ Represents arbitrary raw pass-through JSON.
+</summary>
+</member>
+<member name="M:Gluon.JsonSerializer.Create(System.Collections.Generic.IEnumerable{System.Type})">
+<summary>
+ Constructs a serializer for a given set of seed types.
+ The serializer can the serialize any type in the transitive closure of
+ the `depends` relation over the seed types. A record type `depends`
+ on the types of its fields, a union type on the types of its case
+ fields, and so on.
+</summary>
+</member>
+<member name="T:Gluon.JsonSerializer">
+<summary>
+ A capability to perform JSON serialization.
+</summary>
+</member>
+<member name="P:Gluon.Method.Schema">
+<summary>
+ Schema metadata associated with the method.
+</summary>
+</member>
+<member name="P:Gluon.Method.IOTypes">
+<summary>
+ Types used in input and output.
+</summary>
+</member>
+<member name="M:Gluon.Method.Reflect(System.Reflection.MethodInfo)">
+<summary>
+ Defines a method by reflecting a static runtime method.
+</summary>
+</member>
+<member name="M:Gluon.Method.Invoke(Gluon.Context,System.Object)">
+<summary>
+ Given a encoded input arguments, invokes the method
+ and asynchronously computes the boxed response.
+ Argument encoding depends on arity:
+     arity = 0   arg = null
+     arity = 1   arg = box x
+     arity = N   arg = box (x, y, .. z)
+</summary>
+</member>
+<member name="M:Gluon.Method.Create``3(System.String,System.String,System.String,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Control.FSharpAsync{``2}}})">
+<summary>
+ Defines a method with arity = 2.
+</summary>
+</member>
+<member name="M:Gluon.Method.Create``2(System.String,System.String,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{``1}})">
+<summary>
+ Defines a method with arity = 1.
+</summary>
+</member>
+<member name="M:Gluon.Method.Create``1(System.String,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Control.FSharpAsync{``0}})">
+<summary>
+ Defines a method with arity = 0.
+</summary>
+</member>
+<member name="T:Gluon.Method">
+<summary>
+ An executable runtime descriptor of a Gluon remote method.
+</summary>
+</member>
+<member name="P:Gluon.Service.Schema">
+<summary>
+ Schema metadata associated with the service.
+</summary>
+</member>
+<member name="P:Gluon.Service.Methods">
+<summary>
+ Constituent methods.
+</summary>
+</member>
+<member name="P:Gluon.Service.IOTypes">
+<summary>
+ All types used in method input and output.
+</summary>
+</member>
+<member name="M:Gluon.Service.Merge(System.Collections.Generic.IEnumerable{Gluon.Service})">
+<summary>
+ Merges multiple services into one.
+</summary>
+</member>
+<member name="M:Gluon.Service.FromMethod(Gluon.Method)">
+<summary>
+ Creates a single-method service.
+</summary>
+</member>
+<member name="M:Gluon.Service.FromAssembly(System.Reflection.Assembly)">
+<summary>
+ Traverses an assembly to detect methods marked with
+ RemoteAttribute and constructs a corresponding service.
+</summary>
+</member>
+<member name="T:Gluon.Service">
+<summary>
+ A runtime desctiptor of a Gluon service, a set of remote-callable methods.
+</summary>
+</member>
+<member name="P:Gluon.Options.UrlPrefix">
+<summary>
+ The URL prefix.
+</summary>
+</member>
+<member name="P:Gluon.Options.Service">
+<summary>
+ The Gluon service used by the adapter.
+</summary>
+</member>
+<member name="M:Gluon.Options.Create(Gluon.Service,Microsoft.FSharp.Core.FSharpOption{System.String})">
+<summary>
+ Constructs a new OwinAdapter for a given service.
+ The URL prefix defaults to `/gluon-api`.
+</summary>
+</member>
+<member name="T:Gluon.Options">
+<summary>
+ Options for adapting Gluon services to OWIN using HTTP transport.
+</summary>
+</member>
+<member name="P:Gluon.Schema.Service.Namespaces">
+<summary>
+ Lists the top-level namespaces.
+</summary>
+</member>
+<member name="M:Gluon.Schema.Service.Check">
+<summary>
+ Validates absense of common errors: invalid names,
+ name clashes, dangling references.
+</summary>
+</member>
+<member name="T:Gluon.Schema.Service">
+<summary>
+ Describes a complete Gluon service.
+</summary>
+</member>
+<member name="T:Gluon.Schema.Method">
+<summary>
+ Remote method descriptor.
+</summary>
+</member>
+<member name="T:Gluon.Schema.CallingConvention.HttpCallingConvention">
+<summary>
+ The method is called over HTTP, using specified verb and path.
+ Example of a path: &quot;/FooController/Bar&quot;.
+ For GET verb, parameters are passed in URL.
+ For other verbs, they are passed in body as JSON.
+</summary>
+</member>
+<member name="T:Gluon.Schema.CallingConvention">
+<summary>
+ Information on how to call the method.
+</summary>
+</member>
+<member name="M:Gluon.Schema.HttpMethod.Parse(System.String)">
+<summary>
+ Parses a string representation.
+</summary>
+</member>
+<member name="T:Gluon.Schema.HttpMethod">
+<summary>
+ HTTP methods such as GET, POST, etc.
+</summary>
+</member>
+<member name="T:Gluon.Schema.Parameter">
+<summary>
+ Method parameter descriptor.
+</summary>
+</member>
+<member name="T:Gluon.Schema.TypeDefinition">
+<summary>
+ Named type definitions.
+</summary>
+</member>
+<member name="T:Gluon.Schema.Enum">
+<summary>
+ Enumeration type definition.
+</summary>
+</member>
+<member name="T:Gluon.Schema.EnumCase">
+<summary>
+ Enumeration case definition.
+</summary>
+</member>
+<member name="T:Gluon.Schema.Union">
+<summary>
+ Named type definition corresponding to a discriminated union.
+</summary>
+</member>
+<member name="T:Gluon.Schema.UnionCase">
+<summary>
+ Discriminated union case definition.
+</summary>
+</member>
+<member name="T:Gluon.Schema.Record">
+<summary>
+ Named type definition corresponding to a record.
+</summary>
+</member>
+<member name="T:Gluon.Schema.Field">
+<summary>
+ Describes a record or a union case field.
+</summary>
+</member>
+<member name="T:Gluon.Schema.DataType">
+<summary>
+ Describes types that can travel over Gluon transport - the DataType set.
+</summary>
+</member>
+<member name="T:Gluon.Utility">
+<summary>
+ Misc internal utilities.
+</summary>
+</member>
+<member name="T:Gluon.PrettyPrint">
+<summary>
+ Wadler-style pretty-printer.
+</summary>
+</member>
+<member name="T:Gluon.Reflect">
+<summary>
+ Reflection facilities.
+</summary>
+</member>
+<member name="M:Gluon.TypeScript.Generator.WriteString(Gluon.Service)">
+<summary>
+ Writes code to a string.
+</summary>
+</member>
+<member name="M:Gluon.TypeScript.Generator.WriteFile(Gluon.Service,System.String)">
+<summary>
+ Writes code to a file.
+</summary>
+</member>
+<member name="M:Gluon.TypeScript.Generator.Write(Gluon.Service,System.IO.TextWriter)">
+<summary>
+ Writes code to a writer.
+</summary>
+</member>
+<member name="M:Gluon.TypeScript.Generator.GenerateServiceCode(Gluon.Service)">
+<summary>
+ Generates code for a service.
+</summary>
+</member>
+<member name="M:Gluon.TypeScript.Generator.Create">
+<summary>
+ Creates an instance.
+</summary>
+</member>
+<member name="T:Gluon.TypeScript.Generator">
+<summary>
+ Provides TypeScript code generation.
+</summary>
+</member>
+<member name="P:Gluon.TypeScript.Program.Initializer">
+<summary>
+ Intialization code.
+</summary>
+</member>
+<member name="P:Gluon.TypeScript.Program.Definitions">
+<summary>
+ Definitions code.
+</summary>
+</member>
+<member name="T:Gluon.TypeScript.Program">
+<summary>
+ TypeScript program.
+</summary>
+</member>
+<member name="M:Gluon.TypeScript.CodeUnit.WriteString">
+<summary>
+ Writes code to a string.
+</summary>
+</member>
+<member name="M:Gluon.TypeScript.CodeUnit.WriteFile(System.String)">
+<summary>
+ Writes code to a file.
+</summary>
+</member>
+<member name="M:Gluon.TypeScript.CodeUnit.Write(System.IO.TextWriter)">
+<summary>
+ Writes code to a writer.
+</summary>
+</member>
+<member name="T:Gluon.TypeScript.CodeUnit">
+<summary>
+ Represents a TypeScript code unit.
+</summary>
+</member>
+<member name="T:Gluon.TypeScript.Syntax">
+<summary>
+ Simple syntax tree to assist with code generation.
+</summary>
+</member>
+<member name="T:Gluon.TypeScript.PrettyPrinter">
+<summary>
+ Converts Syntax trees to PrettyPrint terms.
+</summary>
+</member>
+<member name="T:Gluon.TypeScript.CodeGen">
+<summary>
+ Converts Gluon Entities into Syntax trees.
+</summary>
+</member>
+<member name="M:Gluon.Owin.middleware(Gluon.Options)">
+<summary>
+ Handles a web request by dispatching it to a service method.
+</summary>
+</member>
+<member name="T:Gluon.Owin">
+<summary>
+ Owin-related types.
+</summary>
+</member>
+</members>
+</doc>

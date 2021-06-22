@@ -47,7 +47,7 @@ namespace Infraestructure.Data
                     }
                     else
                     {
-                        brHeader.BaseStream.Seek(0, c);
+                        brHeader.BaseStream.Seek(0, SeekOrigin.Begin);
                         n = brHeader.ReadInt32();
                         k = brHeader.ReadInt32();
                     }
@@ -343,11 +343,11 @@ namespace Infraestructure.Data
 
                     if (position < 0) // RandomBinarySearch devuelve -1 si dicho no valor no se encuentra
                         return false;
-
+                    
                     int pD = (id - 1) * size;
                     brData.BaseStream.Seek(pD, SeekOrigin.Begin);
 
-                    // y lo plasmamos como calcomania a escribir pa
+                    // y lo plasmamos como calcomania a escribir pa      
                     using (BinaryWriter bwData = new BinaryWriter(brData.BaseStream))
                     {
                         foreach (PropertyInfo pinfo in properties)
