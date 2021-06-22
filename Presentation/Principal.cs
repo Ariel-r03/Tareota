@@ -113,5 +113,23 @@ namespace Presentation
             // que se oculte
             hideSubMenu();
         }
+
+        private Form activeF = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeF != null)
+                activeF.Close();
+            activeF = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;//quitar borde de formulario
+            childForm.Dock = DockStyle.Fill;
+            // agregar form a panel contenedor
+            pnlChildForm.Controls.Add(childForm);
+            pnlChildForm.Tag = childForm;
+
+            //mostrar
+            childForm.Show();
+
+        }
     }
 }

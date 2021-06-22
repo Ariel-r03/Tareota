@@ -41,7 +41,7 @@ namespace Presentation
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUserOptions = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pnlLeftMenu.SuspendLayout();
             this.pnlSubMenuProducto.SuspendLayout();
             this.pnlSubMenuOptions.SuspendLayout();
@@ -215,26 +215,20 @@ namespace Presentation
             this.panel1.Size = new System.Drawing.Size(250, 100);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // pnlChildForm
             // 
-<<<<<<< HEAD
-            this.panel2.Location = new System.Drawing.Point(257, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(585, 509);
-=======
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(250, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(604, 534);
->>>>>>> 7b85607d2dea438ad19a08f008a951810a0e9cbc
-            this.panel2.TabIndex = 1;
+            this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChildForm.Location = new System.Drawing.Point(250, 0);
+            this.pnlChildForm.Name = "pnlChildForm";
+            this.pnlChildForm.Size = new System.Drawing.Size(604, 534);
+            this.pnlChildForm.TabIndex = 1;
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 534);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlLeftMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -262,6 +256,6 @@ namespace Presentation
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUserOptions;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlChildForm;
     }
 }
