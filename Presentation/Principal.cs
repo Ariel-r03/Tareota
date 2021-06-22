@@ -65,7 +65,7 @@ namespace Presentation
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-
+            openChildForm(new frmCreate(clientRepository));			
             // que se oculte
             hideSubMenu();
         }
