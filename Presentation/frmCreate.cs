@@ -18,8 +18,7 @@ namespace Presentation
     {
         private ProductRepository productRepository;
         private IClientRepository clientRepository;
-        //IClientRepository clientRepository = new ClientRepository();
-        public frmCreate(IClientRepository clientRepository)
+        public frmCreate()
         {
             this.clientRepository = clientRepository;
             InitializeComponent();
@@ -31,33 +30,6 @@ namespace Presentation
         {
             this.Close();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAcept_Click(object sender, EventArgs e)
-        {
-
-            String name = txtName.Text;
-            String lastName = txtLastName.Text;
-            String email = isEmail(txtEmail.Text) ? txtEmail.Text : "no";
-            String numberPhone = isNumberPhone(txtNumberPhone.Text) ? txtNumberPhone.Text : "no";
-            if (!ValidateTextBox(name, lastName, email, numberPhone))
-            {
-                lblBadInputs.Visible = true;
-            }
-            else
-            {
-                Create(name, lastName, email, numberPhone);
-                lblBadInputs.Visible = false; 
-                lblCorrectInput.Visible = true;
-            }
-
-            
-
-        }
         private void Create(String name, String lastName, String email, String number)
         {
             Client client = new Client()
@@ -68,11 +40,11 @@ namespace Presentation
                 Phone = number
             };
             clientRepository.Create(client);
-            
+
         }
         private bool ValidateTextBox(String name, String lastName, String email, String number)
         {
-            if (string.IsNullOrEmpty(txtEmail.Text)|| string.IsNullOrEmpty(txtLastName.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtNumberPhone.Text))
+            if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtLastName.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtNumberPhone.Text))
             {
                 return false;
             }
@@ -90,8 +62,8 @@ namespace Presentation
             if (Regex.IsMatch(e, expresion))
             {
                 if (Regex.Replace(e, expresion, String.Empty).Length == 0)
-                    return true;             
-                else               
+                    return true;
+                else
                     return false;
             }
             else
@@ -110,9 +82,22 @@ namespace Presentation
                 return false;
         }
 
-        private void lblBadInputs_Click(object sender, EventArgs e)
+        private void btnAcept_Click(object sender, EventArgs e)
         {
-
+            String name = txtName.Text;
+            String lastName = txtLastName.Text;
+            String email = isEmail(txtEmail.Text) ? txtEmail.Text : "no";
+            String numberPhone = isNumberPhone(txtNumberPhone.Text) ? txtNumberPhone.Text : "no";
+            if (!ValidateTextBox(name, lastName, email, numberPhone))
+            {
+                lblBadInputs.Visible = true;
+            }
+            else
+            {
+                Create(name, lastName, email, numberPhone);
+                lblBadInputs.Visible = false;
+                lblCorrectInput.Visible = true;
+            }
         }
     }
 }

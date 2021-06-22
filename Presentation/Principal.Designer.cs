@@ -217,9 +217,16 @@ namespace Presentation
             // 
             // panel2
             // 
+<<<<<<< HEAD
             this.panel2.Location = new System.Drawing.Point(257, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(585, 509);
+=======
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(250, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(604, 534);
+>>>>>>> 7b85607d2dea438ad19a08f008a951810a0e9cbc
             this.panel2.TabIndex = 1;
             // 
             // Principal
