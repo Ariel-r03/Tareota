@@ -33,12 +33,12 @@ namespace Presentation
         {
             Product p = new Product()
             {
-                Name = "Galleta",
-                Brand = "Nabisco",
+                Name = "Galletaa",
+                Brand = "Nabiscxxo",
                 Model = "Oreo",
-                Description = "Galleta de Vainilla",
-                Price = 10M,
-                Stock = 10,
+                Description = "Galleta asxde Vainilla",
+                Price = 110M,
+                Stock = 120,
                 ImageURL = ""
             };
 

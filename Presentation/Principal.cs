@@ -1,5 +1,6 @@
 ﻿using Core;
 using Infraestructure.Data;
+using Presentation.showUser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,13 +16,15 @@ namespace Presentation
     public partial class Principal : Form
     {
         private ProductRepository productRepository;
-        private IClientRepository clientRepository;
+        private IClientRepository clientRepository = new ClientRepository();
 
-        public Principal(IClientRepository clientRepository)
+        public Principal()
         {
-            this.clientRepository = clientRepository;
+            //this.clientRepository = clientRepository;
             InitializeComponent();
             changePanel();
+            picProduct.Visible = false;
+            picUser.Visible = false;
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -59,20 +62,21 @@ namespace Presentation
         //Usuario
         private void btnUserOptions_Click(object sender, EventArgs e)
         {
+            picUser.Visible = true;
             showingSubMenues(pnlSubMenuOptions);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            openChildForm(new frmCreate(clientRepository));			
+            openChildForm(new frmCreate1());			
             // que se oculte
             hideSubMenu();
         }
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new MostrarUsuario());
 
             // que se oculte
             hideSubMenu();
@@ -88,12 +92,13 @@ namespace Presentation
         //Producto
         private void btnProductos_Click(object sender, EventArgs e)
         {
+            picProduct.Visible = true;
             showingSubMenues(pnlSubMenuProducto);
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new FrmAddProducto());
             // que se oculte
             hideSubMenu();
         }

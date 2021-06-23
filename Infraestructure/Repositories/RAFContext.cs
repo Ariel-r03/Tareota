@@ -195,6 +195,10 @@ namespace Infraestructure.Data
             using (BinaryReader brHeader = new BinaryReader(HeaderStream))
             {
                 brHeader.BaseStream.Seek(0, SeekOrigin.Begin);
+                if (brHeader.BaseStream.Length== 0)
+                {
+                    return null;
+                }
                 n = brHeader.ReadInt32();
                 k = brHeader.ReadInt32();
             }

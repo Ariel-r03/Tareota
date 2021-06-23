@@ -26,7 +26,11 @@ namespace Infraestructure.Data
 
         public bool Delete(Client t)
         {
-            throw new NotImplementedException();
+            if (context.Get<Client>(t.Id) == null)
+            {
+                throw new ArgumentException($"El cliente con la ID {t.Id} does not exists.");
+            }
+            return context.Delete(t.Id);
         }
 
         public IEnumerable<Client> Find(Expression<Func<Client, bool>> where)
@@ -42,6 +46,11 @@ namespace Infraestructure.Data
         public int Update(Client t)
         {
             throw new NotImplementedException();
+        }
+
+        public Client Get<Cliente>(int index)
+        {
+            return context.Get<Client>(index);
         }
     }
 }

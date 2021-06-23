@@ -42,9 +42,14 @@ namespace Presentation
             this.btnUserOptions = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.picProduct = new System.Windows.Forms.PictureBox();
+            this.picUser = new System.Windows.Forms.PictureBox();
             this.pnlLeftMenu.SuspendLayout();
             this.pnlSubMenuProducto.SuspendLayout();
             this.pnlSubMenuOptions.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLeftMenu
@@ -209,6 +214,8 @@ namespace Presentation
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.picProduct);
+            this.panel1.Controls.Add(this.picUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -222,6 +229,26 @@ namespace Presentation
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(604, 534);
             this.pnlChildForm.TabIndex = 1;
+            // 
+            // picProduct
+            // 
+            this.picProduct.Image = global::Presentation.Properties.Resources.abrir_caja;
+            this.picProduct.Location = new System.Drawing.Point(53, 12);
+            this.picProduct.Name = "picProduct";
+            this.picProduct.Size = new System.Drawing.Size(125, 74);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProduct.TabIndex = 1;
+            this.picProduct.TabStop = false;
+            // 
+            // picUser
+            // 
+            this.picUser.Image = global::Presentation.Properties.Resources.user;
+            this.picUser.Location = new System.Drawing.Point(53, 12);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(125, 74);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUser.TabIndex = 0;
+            this.picUser.TabStop = false;
             // 
             // Principal
             // 
@@ -238,6 +265,9 @@ namespace Presentation
             this.pnlLeftMenu.ResumeLayout(false);
             this.pnlSubMenuProducto.ResumeLayout(false);
             this.pnlSubMenuOptions.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +287,7 @@ namespace Presentation
         private System.Windows.Forms.Button btnUserOptions;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlChildForm;
+        private System.Windows.Forms.PictureBox picUser;
+        private System.Windows.Forms.PictureBox picProduct;
     }
 }

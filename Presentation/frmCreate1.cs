@@ -17,10 +17,10 @@ namespace Presentation
     public partial class frmCreate1 : Form
     {
         private ProductRepository productRepository;
-        private IClientRepository clientRepository;
+        private IClientRepository clientRepository = new ClientRepository();
         public frmCreate1()
         {
-            this.clientRepository = clientRepository;
+            //this.clientRepository = clientRepository;
             InitializeComponent();
             lblIncorrect.Visible = false;
             lblCorrect.Visible = false;

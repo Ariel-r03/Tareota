@@ -20,13 +20,13 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            IClientRepository clientRepository = new ClientRepository();
-            Application.Run(new Principal(clientRepository));
+            //IClientRepository clientRepository = new ClientRepository();
+            Application.Run(new Principal());
         }
 
-        static IHostBuilder CreateHostBuilder(string[] args) =>
+        /*static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((_, services) =>                    
-                   services.AddScoped<IClientRepository, ClientRepository>());
+                   services.AddScoped<IClientRepository, ClientRepository>());*/
     }
 }

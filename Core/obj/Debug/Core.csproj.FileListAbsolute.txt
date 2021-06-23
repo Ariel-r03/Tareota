@@ -76,3 +76,21 @@ C:\Users\MSI\Source\Repos\Ariel-r03\Tareota\Core\obj\Debug\Core.csproj.CoreCompi
 C:\Users\MSI\Source\Repos\Ariel-r03\Tareota\Core\obj\Debug\Core.csproj.CopyComplete
 C:\Users\MSI\Source\Repos\Ariel-r03\Tareota\Core\obj\Debug\Core.exe
 C:\Users\MSI\Source\Repos\Ariel-r03\Tareota\Core\obj\Debug\Core.pdb
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Core.exe.config
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Core.exe
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Core.pdb
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\obj\Debug\Core.exe
+C:\Users\Pablo\Desktop\ultimo intento\Tareota\Core\obj\Debug\Core.pdb
